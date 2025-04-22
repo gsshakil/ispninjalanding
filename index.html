@@ -1,679 +1,698 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ISP Billing and Management System</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0052cc',
+                        'primary-dark': '#003d99',
+                        secondary: '#ff6b00',
+                        'secondary-light': '#ffa366',
+                        light: '#f8fafc',
+                        dark: '#172b4d',
+                        success: '#36b37e',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="font-sans text-gray-800 leading-relaxed">
+    <header
+        class="bg-gradient-to-br from-primary to-primary-dark text-white py-16 md:py-20 text-center relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10 bg-network"></div>
+        <div class="container mx-auto px-4 max-w-6xl relative">
+            <h1 class="text-4xl md:text-5xl font-bold mb-5">ISP Billing and Management System</h1>
+            <p class="text-lg md:text-xl max-w-2xl mx-auto mb-8">A comprehensive solution for Internet Service Providers
+                to streamline billing, customer management, network operations, and business growth</p>
+            <div>
+                <a href="#demo"
+                    class="inline-block bg-white text-primary px-8 py-3 rounded-full font-semibold text-base transition-all duration-300 hover:-translate-y-1 hover:shadow-lg m-2">Request
+                    Demo</a>
+                <a href="#features"
+                    class="inline-block bg-transparent border-2 border-white text-white px-8 py-3 rounded-full font-semibold text-base transition-all duration-300 hover:-translate-y-1 hover:shadow-lg m-2">Explore
+                    Features</a>
+            </div>
+        </div>
+    </header>
+
+    <section id="modules" class="bg-light py-20">
+        <div class="container mx-auto px-4 max-w-6xl">
+            <h2
+                class="text-3xl md:text-4xl font-bold mb-16 text-center relative after:content-[''] after:block after:w-20 after:h-1 after:bg-primary after:mx-auto after:mt-5">
+                Core Modules</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div
+                    class="bg-white rounded-lg p-6 shadow-md transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:border-l-4 hover:border-l-primary">
+                    <h3 class="text-xl font-semibold mb-4 text-gray-800 flex items-center">
+                        <span
+                            class="bg-primary text-white w-7 h-7 rounded-full flex items-center justify-center mr-3 text-sm">1</span>
+                        Customer Management
+                    </h3>
+                    <ul class="list-disc pl-5">
+                        <li class="mb-2">Customer registration & profiling</li>
+                        <li class="mb-2">Service subscription management</li>
+                        <li class="mb-2">Customer portal with self-service</li>
+                        <li class="mb-2">Support ticket integration</li>
+                    </ul>
+                </div>
+
+                <div
+                    class="bg-white rounded-lg p-6 shadow-md transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:border-l-4 hover:border-l-primary">
+                    <h3 class="text-xl font-semibold mb-4 text-gray-800 flex items-center">
+                        <span
+                            class="bg-primary text-white w-7 h-7 rounded-full flex items-center justify-center mr-3 text-sm">2</span>
+                        Billing & Invoicing
+                    </h3>
+                    <ul class="list-disc pl-5">
+                        <li class="mb-2">Automated billing cycles</li>
+                        <li class="mb-2">Multiple pricing models</li>
+                        <li class="mb-2">Usage-based & flat-rate billing</li>
+                        <li class="mb-2">Tax calculation & compliance</li>
+                        <li class="mb-2">Discounts & promotional offers</li>
+                    </ul>
+                </div>
+
+                <div
+                    class="bg-white rounded-lg p-6 shadow-md transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:border-l-4 hover:border-l-primary">
+                    <h3 class="text-xl font-semibold mb-4 text-gray-800 flex items-center">
+                        <span
+                            class="bg-primary text-white w-7 h-7 rounded-full flex items-center justify-center mr-3 text-sm">3</span>
+                        Payment Processing
+                    </h3>
+                    <ul class="list-disc pl-5">
+                        <li class="mb-2">Multiple payment gateways</li>
+                        <li class="mb-2">Recurring payment scheduling</li>
+                        <li class="mb-2">Payment notifications & reminders</li>
+                        <li class="mb-2">Auto-payment options</li>
+                        <li class="mb-2">Payment dispute handling</li>
+                    </ul>
+                </div>
+
+                <div
+                    class="bg-white rounded-lg p-6 shadow-md transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:border-l-4 hover:border-l-primary">
+                    <h3 class="text-xl font-semibold mb-4 text-gray-800 flex items-center">
+                        <span
+                            class="bg-primary text-white w-7 h-7 rounded-full flex items-center justify-center mr-3 text-sm">4</span>
+                        Network Management
+                    </h3>
+                    <ul class="list-disc pl-5">
+                        <li class="mb-2">IP address & subnet management</li>
+                        <li class="mb-2">Bandwidth monitoring & control</li>
+                        <li class="mb-2">Network device integration</li>
+                        <li class="mb-2">Service activation/deactivation</li>
+                        <li class="mb-2">Network health monitoring</li>
+                    </ul>
+                </div>
+
+                <div
+                    class="bg-white rounded-lg p-6 shadow-md transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:border-l-4 hover:border-l-primary">
+                    <h3 class="text-xl font-semibold mb-4 text-gray-800 flex items-center">
+                        <span
+                            class="bg-primary text-white w-7 h-7 rounded-full flex items-center justify-center mr-3 text-sm">5</span>
+                        Service Provisioning
+                    </h3>
+                    <ul class="list-disc pl-5">
+                        <li class="mb-2">Automated service activation</li>
+                        <li class="mb-2">Package & plan configuration</li>
+                        <li class="mb-2">Service upgrades/downgrades</li>
+                        <li class="mb-2">Equipment management & tracking</li>
+                        <li class="mb-2">Installation scheduling</li>
+                    </ul>
+                </div>
+
+                <div
+                    class="bg-white rounded-lg p-6 shadow-md transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:border-l-4 hover:border-l-primary">
+                    <h3 class="text-xl font-semibold mb-4 text-gray-800 flex items-center">
+                        <span
+                            class="bg-primary text-white w-7 h-7 rounded-full flex items-center justify-center mr-3 text-sm">6</span>
+                        Support & Ticketing
+                    </h3>
+                    <ul class="list-disc pl-5">
+                        <li class="mb-2">Ticket creation & tracking</li>
+                        <li class="mb-2">SLA management & escalations</li>
+                        <li class="mb-2">Knowledge base integration</li>
+                        <li class="mb-2">Multi-channel support</li>
+                        <li class="mb-2">Customer communication history</li>
+                    </ul>
+                </div>
+
+                <div
+                    class="bg-white rounded-lg p-6 shadow-md transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:border-l-4 hover:border-l-primary">
+                    <h3 class="text-xl font-semibold mb-4 text-gray-800 flex items-center">
+                        <span
+                            class="bg-primary text-white w-7 h-7 rounded-full flex items-center justify-center mr-3 text-sm">7</span>
+                        Reporting & Analytics
+                    </h3>
+                    <ul class="list-disc pl-5">
+                        <li class="mb-2">Financial performance dashboards</li>
+                        <li class="mb-2">Revenue & collection analytics</li>
+                        <li class="mb-2">Customer acquisition & churn</li>
+                        <li class="mb-2">Network performance metrics</li>
+                        <li class="mb-2">Custom report builder</li>
+                    </ul>
+                </div>
+
+                <div
+                    class="bg-white rounded-lg p-6 shadow-md transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:border-l-4 hover:border-l-primary">
+                    <h3 class="text-xl font-semibold mb-4 text-gray-800 flex items-center">
+                        <span
+                            class="bg-primary text-white w-7 h-7 rounded-full flex items-center justify-center mr-3 text-sm">8</span>
+                        Marketing & Sales
+                    </h3>
+                    <ul class="list-disc pl-5">
+                        <li class="mb-2">Campaign management</li>
+                        <li class="mb-2">Lead tracking & conversion</li>
+                        <li class="mb-2">Referral program management</li>
+                        <li class="mb-2">Customer segmentation</li>
+                        <li class="mb-2">Cross-selling opportunities</li>
+                    </ul>
+                </div>
+
+                <!-- New Reseller Management Module -->
+                <div
+                    class="bg-white rounded-lg p-6 shadow-md transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:border-l-4 hover:border-l-primary">
+                    <h3 class="text-xl font-semibold mb-4 text-gray-800 flex items-center">
+                        <span
+                            class="bg-primary text-white w-7 h-7 rounded-full flex items-center justify-center mr-3 text-sm">9</span>
+                        Reseller Management
+                    </h3>
+                    <ul class="list-disc pl-5">
+                        <li class="mb-2">Multi-tier reseller hierarchy</li>
+                        <li class="mb-2">White-label branding options</li>
+                        <li class="mb-2">Customizable commission structures</li>
+                        <li class="mb-2">Automated revenue sharing</li>
+                        <li class="mb-2">Reseller performance dashboard</li>
+                    </ul>
+                </div>
+                <!-- Inventory Management Module -->
+                <div
+                    class="bg-white rounded-lg p-6 shadow-md transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:border-l-4 hover:border-l-primary">
+                    <h3 class="text-xl font-semibold mb-4 text-gray-800 flex items-center">
+                        <span
+                            class="bg-primary text-white w-7 h-7 rounded-full flex items-center justify-center mr-3 text-sm">10</span>
+                        Inventory Management
+                    </h3>
+                    <ul class="list-disc pl-5">
+                        <li class="mb-2">Track hardware equipment (routers, modems, cables)</li>
+                        <li class="mb-2">Manage inventory lifecycle and depreciation</li>
+                        <li class="mb-2">Automate procurement workflows</li>
+                        <li class="mb-2">Real-time stock availability visibility</li>
+                        <li class="mb-2">Equipment assignment to customers</li>
+                    </ul>
+                </div>
+
+                <!-- Compliance & Regulatory Management Module (Newest) -->
+                <div
+                    class="bg-white rounded-lg p-6 shadow-md transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:border-l-4 hover:border-l-primary relative">
+                    <div
+                        class="absolute -top-3 -right-3 bg-secondary text-white text-xs font-bold px-3 py-1 rounded-full shadow-md">
+                        NEW</div>
+                    <h3 class="text-xl font-semibold mb-4 text-gray-800 flex items-center">
+                        <span
+                            class="bg-primary text-white w-7 h-7 rounded-full flex items-center justify-center mr-3 text-sm">11</span>
+                        Compliance & Regulatory Management
+                    </h3>
+                    <ul class="list-disc pl-5">
+                        <li class="mb-2">Data retention policy enforcement</li>
+                        <li class="mb-2">Regulatory reporting automation</li>
+                        <li class="mb-2">Auditing and compliance documentation</li>
+                        <li class="mb-2">Privacy controls and consent management</li>
+                        <li class="mb-2">Geographic service area compliance</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="features" class="py-20">
+        <div class="container mx-auto px-4 max-w-6xl">
+            <h2
+                class="text-3xl md:text-4xl font-bold mb-16 text-center relative after:content-[''] after:block after:w-20 after:h-1 after:bg-primary after:mx-auto after:mt-5">
+                Key Features</h2>
+            <div class="flex flex-wrap -mx-4">
+                <div class="w-full md:w-1/2 lg:w-1/3 px-4 mb-8">
+                    <div
+                        class="bg-white rounded-lg overflow-hidden shadow-md transition-all duration-300 hover:-translate-y-2 hover:shadow-lg h-full">
+                        <div class="bg-light p-8 text-center">
+                            <svg class="w-16 h-16 mx-auto" viewBox="0 0 24 24" fill="none" stroke="#0052cc"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                                <line x1="8" y1="21" x2="16" y2="21"></line>
+                                <line x1="12" y1="17" x2="12" y2="21"></line>
+                            </svg>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-4">Automated Billing</h3>
+                            <ul class="list-disc pl-5">
+                                <li class="mb-2">Recurring billing automation</li>
+                                <li class="mb-2">Prorated billing for mid-cycle changes</li>
+                                <li class="mb-2">Usage-based billing with thresholds</li>
+                                <li class="mb-2">Multi-currency support</li>
+                                <li class="mb-2">Flexible billing cycles</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w-full md:w-1/2 lg:w-1/3 px-4 mb-8">
+                    <div
+                        class="bg-white rounded-lg overflow-hidden shadow-md transition-all duration-300 hover:-translate-y-2 hover:shadow-lg h-full">
+                        <div class="bg-light p-8 text-center">
+                            <svg class="w-16 h-16 mx-auto" viewBox="0 0 24 24" fill="none" stroke="#0052cc"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+                            </svg>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-4">Network Monitoring</h3>
+                            <ul class="list-disc pl-5">
+                                <li class="mb-2">Real-time bandwidth monitoring</li>
+                                <li class="mb-2">Traffic analysis & shaping</li>
+                                <li class="mb-2">QoS management</li>
+                                <li class="mb-2">Automated alerts & notifications</li>
+                                <li class="mb-2">Network topology mapping</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w-full md:w-1/2 lg:w-1/3 px-4 mb-8">
+                    <div
+                        class="bg-white rounded-lg overflow-hidden shadow-md transition-all duration-300 hover:-translate-y-2 hover:shadow-lg h-full">
+                        <div class="bg-light p-8 text-center">
+                            <svg class="w-16 h-16 mx-auto" viewBox="0 0 24 24" fill="none" stroke="#0052cc"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="9" cy="7" r="4"></circle>
+                                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                            </svg>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-4">Customer Self-Service</h3>
+                            <ul class="list-disc pl-5">
+                                <li class="mb-2">Client portal with dashboard</li>
+                                <li class="mb-2">Online bill payment</li>
+                                <li class="mb-2">Service upgrade/downgrade options</li>
+                                <li class="mb-2">Usage statistics & history</li>
+                                <li class="mb-2">Support ticket submission & tracking</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w-full md:w-1/2 lg:w-1/3 px-4 mb-8">
+                    <div
+                        class="bg-white rounded-lg overflow-hidden shadow-md transition-all duration-300 hover:-translate-y-2 hover:shadow-lg h-full">
+                        <div class="bg-light p-8 text-center">
+                            <svg class="w-16 h-16 mx-auto" viewBox="0 0 24 24" fill="none" stroke="#0052cc"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                                <path d="M7 11V7a5 5 0 0110 0v4"></path>
+                            </svg>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-4">Security & Compliance</h3>
+                            <ul class="list-disc pl-5">
+                                <li class="mb-2">End-to-end encryption</li>
+                                <li class="mb-2">Multi-factor authentication</li>
+                                <li class="mb-2">Role-based access control</li>
+                                <li class="mb-2">Data retention policies</li>
+                                <li class="mb-2">Regulatory compliance tools</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w-full md:w-1/2 lg:w-1/3 px-4 mb-8">
+                    <div
+                        class="bg-white rounded-lg overflow-hidden shadow-md transition-all duration-300 hover:-translate-y-2 hover:shadow-lg h-full">
+                        <div class="bg-light p-8 text-center">
+                            <svg class="w-16 h-16 mx-auto" viewBox="0 0 24 24" fill="none" stroke="#0052cc"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"></path>
+                                <path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"></path>
+                            </svg>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-4">Integration Ecosystem</h3>
+                            <ul class="list-disc pl-5">
+                                <li class="mb-2">Accounting software integration</li>
+                                <li class="mb-2">CRM & marketing automation</li>
+                                <li class="mb-2">Network equipment APIs</li>
+                                <li class="mb-2">Payment gateway connectors</li>
+                                <li class="mb-2">Third-party service provisioning</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w-full md:w-1/2 lg:w-1/3 px-4 mb-8">
+                    <div
+                        class="bg-white rounded-lg overflow-hidden shadow-md transition-all duration-300 hover:-translate-y-2 hover:shadow-lg h-full">
+                        <div class="bg-light p-8 text-center">
+                            <svg class="w-16 h-16 mx-auto" viewBox="0 0 24 24" fill="none" stroke="#0052cc"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
+                                <line x1="12" y1="18" x2="12" y2="18"></line>
+                            </svg>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-4">Mobile Access</h3>
+                            <ul class="list-disc pl-5">
+                                <li class="mb-2">Responsive admin dashboard</li>
+                                <li class="mb-2">Native mobile applications</li>
+                                <li class="mb-2">Field technician mobile tools</li>
+                                <li class="mb-2">Offline capabilities with sync</li>
+                                <li class="mb-2">Push notifications</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- New Reseller Features Card -->
+                <div class="w-full md:w-1/2 lg:w-1/3 px-4 mb-8">
+                    <div
+                        class="bg-white rounded-lg overflow-hidden shadow-md transition-all duration-300 hover:-translate-y-2 hover:shadow-lg h-full">
+                        <div class="bg-light p-8 text-center">
+                            <svg class="w-16 h-16 mx-auto" viewBox="0 0 24 24" fill="none" stroke="#0052cc"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path
+                                    d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z">
+                                </path>
+                            </svg>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-4">Reseller Management</h3>
+                            <ul class="list-disc pl-5">
+                                <li class="mb-2">Branded reseller portals</li>
+                                <li class="mb-2">Tiered commission structures</li>
+                                <li class="mb-2">Automated revenue sharing</li>
+                                <li class="mb-2">White-label customer interfaces</li>
+                                <li class="mb-2">Comprehensive reseller analytics</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w-full md:w-1/2 lg:w-1/3 px-4 mb-8">
+                    <div
+                        class="bg-white rounded-lg overflow-hidden shadow-md transition-all duration-300 hover:-translate-y-2 hover:shadow-lg h-full">
+                        <div class="bg-light p-8 text-center">
+                            <svg class="w-16 h-16 mx-auto" viewBox="0 0 24 24" fill="none" stroke="#0052cc"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M12 20h9"></path>
+                                <path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"></path>
+                            </svg>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-4">Customization Options</h3>
+                            <ul class="list-disc pl-5">
+                                <li class="mb-2">Configurable billing workflows</li>
+                                <li class="mb-2">Custom service packages</li>
+                                <li class="mb-2">Branding & white-labeling</li>
+                                <li class="mb-2">Custom fields & forms</li>
+                                <li class="mb-2">API-driven extensibility</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w-full md:w-1/2 lg:w-1/3 px-4 mb-8">
+                    <div
+                        class="bg-white rounded-lg overflow-hidden shadow-md transition-all duration-300 hover:-translate-y-2 hover:shadow-lg h-full">
+                        <div class="bg-light p-8 text-center">
+                            <svg class="w-16 h-16 mx-auto" viewBox="0 0 24 24" fill="none" stroke="#0052cc"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <line x1="12" y1="8" x2="12" y2="12"></line>
+                                <line x1="12" y1="16" x2="12.01" y2="16"></line>
+                            </svg>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-4">Automated Notifications</h3>
+                            <ul class="list-disc pl-5">
+                                <li class="mb-2">Payment reminders & confirmations</li>
+                                <li class="mb-2">Service outage alerts</li>
+                                <li class="mb-2">Usage threshold notifications</li>
+                                <li class="mb-2">Scheduled maintenance notices</li>
+                                <li class="mb-2">Multi-channel delivery (SMS, email)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- New Dedicated Reseller Section -->
+    <section id="reseller" class="py-20 bg-gradient-to-r from-primary-dark to-primary text-white">
+        <div class="container mx-auto px-4 max-w-6xl">
+            <h2
+                class="text-3xl md:text-4xl font-bold mb-16 text-center relative after:content-[''] after:block after:w-20 after:h-1 after:bg-white after:mx-auto after:mt-5">
+                Reseller Program</h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+                <div>
+                    <h3 class="text-2xl font-bold mb-6">Expand Your Business Reach</h3>
+                    <p class="mb-6 text-lg">Our comprehensive reseller management system lets you build and manage a
+                        network of partners to expand your services without additional infrastructure investments.</p>
+
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <svg class="w-6 h-6 mr-3 flex-shrink-0 text-secondary" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <p>Create multi-tiered reseller hierarchies with customizable access levels and permissions
+                            </p>
+                        </div>
+                        <div class="flex items-start">
+                            <svg class="w-6 h-6 mr-3 flex-shrink-0 text-secondary" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <p>Set flexible commission structures with automated revenue sharing and settlement</p>
+                        </div>
+                        <div class="flex items-start">
+                            <svg class="w-6 h-6 mr-3 flex-shrink-0 text-secondary" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <p>Provide white-label solutions with customizable branding for reseller partners</p>
+                        </div>
+                        <div class="flex items-start">
+                            <svg class="w-6 h-6 mr-3 flex-shrink-0 text-secondary" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <p>Deliver real-time performance analytics and comprehensive reporting dashboards</p>
+                        </div>
+                        <div class="flex items-start">
+                            <svg class="w-6 h-6 mr-3 flex-shrink-0 text-secondary" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <p>Simplify customer transfers between direct accounts and reseller accounts</p>
+                        </div>
+                    </div>
+
+                    <div class="mt-8">
+                        <a href="#reseller-demo"
+                            class="inline-block bg-secondary text-white px-8 py-3 rounded-full font-semibold text-base transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">Become
+                            a Reseller</a>
+                    </div>
+                </div>
+
+                <div class="bg-white bg-opacity-10 p-8 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-semibold mb-6 text-center">Reseller Benefits</h3>
+                    <div class="space-y-6">
+                        <div class="flex">
+                            <div class="mr-4">
+                                <div class="bg-secondary rounded-full p-3 h-12 w-12 flex items-center justify-center">
+                                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z">
+                                        </path>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-lg mb-1">Increased Revenue</h4>
+                                <p class="text-white text-opacity-80">Earn competitive commissions on all services sold
+                                    through your channel</p>
+                            </div>
+                        </div>
+
+                        <div class="flex">
+                            <div class="mr-4">
+                                <div class="bg-secondary rounded-full p-3 h-12 w-12 flex items-center justify-center">
+                                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
+                                        </path>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-lg mb-1">Ready-Made Platform</h4>
+                                <p class="text-white text-opacity-80">Launch quickly with our proven infrastructure and
+                                    technology</p>
+                            </div>
+                        </div>
+
+                        <div class="flex">
+                            <div class="mr-4">
+                                <div class="bg-secondary rounded-full p-3 h-12 w-12 flex items-center justify-center">
+                                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-lg mb-1">Expand Your Offerings</h4>
+                                <p class="text-white text-opacity-80">Add new services to your portfolio without
+                                    development costs</p>
+                            </div>
+                        </div>
+
+                        <div class="flex">
+                            <div class="mr-4">
+                                <div class="bg-secondary rounded-full p-3 h-12 w-12 flex items-center justify-center">
+                                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z">
+                                        </path>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-lg mb-1">Full Technical Support</h4>
+                                <p class="text-white text-opacity-80">Comprehensive support for you and your customers
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="stats bg-primary-dark text-white py-10">
+        <div class="container mx-auto px-4 max-w-6xl">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="text-center">
+                    <h3 class="text-4xl font-bold mb-1">99.9%</h3>
+                    <p class="text-white text-opacity-80">System Uptime</p>
+                </div>
+                <div class="text-center">
+                    <h3 class="text-4xl font-bold mb-1">30%</h3>
+                    <p class="text-white text-opacity-80">Reduction in Billing Errors</p>
+                </div>
+                <div class="text-center">
+                    <h3 class="text-4xl font-bold mb-1">25%</h3>
+                    <p class="text-white text-opacity-80">Increase in Collection Rate</p>
+                </div>
+                <div class="text-center">
+                    <h3 class="text-4xl font-bold mb-1">40%</h3>
+                    <p class="text-white text-opacity-80">Time Saved on Operations</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="benefits py-16">
+        <div class="container mx-auto px-4 max-w-6xl">
+            <h2
+                class="text-3xl md:text-4xl font-bold mb-16 text-center relative after:content-[''] after:block after:w-20 after:h-1 after:bg-primary after:mx-auto after:mt-5">
+                Why Choose Our ISP Billing System</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="text-center p-8">
+                    <svg class="w-16 h-16 mx-auto mb-5 text-primary" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                        <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                    </svg>
+                    <h3 class="text-xl font-semibold mb-4">Reduce Revenue Leakage</h3>
+                    <p>Eliminate billing errors and ensure all services are properly billed with automated processes and
+                        validation checks.</p>
+                </div>
+                <div class="text-center p-8">
+                    <svg class="w-16 h-16 mx-auto mb-5 text-primary" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <polyline points="16 12 12 8 8 12"></polyline>
+                        <line x1="12" y1="16" x2="12" y2="8"></line>
+                    </svg>
+                    <h3 class="text-xl font-semibold mb-4">Scale Your Business</h3>
+                    <p>Support growth from hundreds to millions of subscribers with our cloud-based architecture and
+                        flexible deployment options.</p>
+                </div>
+                <div class="text-center p-8">
+                    <svg class="w-16 h-16 mx-auto mb-5 text-primary" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="8.5" cy="7" r="4"></circle>
+                        <polyline points="17 11 19 13 23 9"></polyline>
+                    </svg>
+                    <h3 class="text-xl font-semibold mb-4">Improve Customer Experience</h3>
+                    <p>Enhance satisfaction with self-service options, transparent billing, and faster issue resolution.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta bg-gradient-to-r from-secondary to-secondary-light text-white py-16 text-center" id="demo">
+        <div class="container mx-auto px-4 max-w-6xl">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">Ready to Transform Your ISP Business?</h2>
+            <p class="text-lg mb-8">Get started today with our comprehensive ISP Billing and Management System</p>
+            <div>
+                <a href="#contact"
+                    class="inline-block bg-white text-secondary px-8 py-3 rounded-full font-semibold text-base transition-all duration-300 hover:-translate-y-1 hover:shadow-lg m-2">Request
+                    Demo</a>
+                <a href="#pricing"
+                    class="inline-block bg-transparent border-2 border-white text-white px-8 py-3 rounded-full font-semibold text-base transition-all duration-300 hover:-translate-y-1 hover:shadow-lg m-2">View
+                    Pricing</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-dark text-white py-12 text-center">
+        <div class="container mx-auto px-4 max-w-6xl">
+            <p>&copy; 2025 ISP Billing and Management System. All rights reserved.</p>
+        </div>
+    </footer>
+
     <style>
-        :root {
-            --primary: #0052cc;
-            --primary-dark: #003d99;
-            --secondary: #ff6b00;
-            --secondary-light: #ffa366;
-            --light: #f8fafc;
-            --dark: #172b4d;
-            --success: #36b37e;
-        }
-        
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            margin: 0;
-            padding: 0;
-            color: var(--dark);
-            line-height: 1.6;
-        }
-        
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-        
-        header {
-            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
-            color: white;
-            padding: 60px 0 80px;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        header .network-bg {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            opacity: 0.1;
-            background-image: 
+        .bg-network {
+            background-image:
                 radial-gradient(circle, #ffffff 1px, transparent 1px),
                 radial-gradient(circle, #ffffff 1px, transparent 1px);
             background-size: 20px 20px;
             background-position: 0 0, 10px 10px;
         }
-        
-        header h1 {
-            font-size: 48px;
-            margin-bottom: 20px;
-            font-weight: 700;
-            position: relative;
-        }
-        
-        header p {
-            font-size: 20px;
-            max-width: 700px;
-            margin: 0 auto 30px;
-            position: relative;
-        }
-        
-        .btn {
-            display: inline-block;
-            background-color: white;
-            color: var(--primary);
-            padding: 12px 30px;
-            border-radius: 30px;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 16px;
-            transition: all 0.3s ease;
-            margin: 10px;
-            position: relative;
-        }
-        
-        .btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-        }
-        
-        .btn-outline {
-            background-color: transparent;
-            border: 2px solid white;
-            color: white;
-        }
-        
-        .btn-secondary {
-            background-color: var(--secondary);
-            color: white;
-        }
-        
-        section {
-            padding: 80px 0;
-        }
-        
-        section h2 {
-            text-align: center;
-            font-size: 36px;
-            margin-bottom: 60px;
-            position: relative;
-        }
-        
-        section h2:after {
-            content: '';
-            display: block;
-            width: 80px;
-            height: 4px;
-            background: var(--primary);
-            margin: 20px auto 0;
-        }
-        
-        .features {
-            display: flex;
-            flex-wrap: wrap;
-            margin: 0 -15px;
-            justify-content: center;
-        }
-        
-        .feature-card {
-            flex: 0 0 calc(33.333% - 30px);
-            margin: 0 15px 30px;
-            background: white;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-            transition: all 0.3s ease;
-        }
-        
-        .feature-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-        }
-        
-        .feature-icon {
-            background: var(--light);
-            padding: 30px;
-            text-align: center;
-        }
-        
-        .feature-icon i {
-            font-size: 40px;
-            color: var(--primary);
-        }
-        
-        .feature-content {
-            padding: 25px;
-        }
-        
-        .feature-content h3 {
-            margin-top: 0;
-            font-size: 22px;
-            margin-bottom: 15px;
-        }
-        
-        .feature-content ul {
-            margin: 0;
-            padding-left: 20px;
-        }
-        
-        .feature-content li {
-            margin-bottom: 8px;
-        }
-        
-        .modules {
-            background-color: var(--light);
-        }
-        
-        .module-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: 25px;
-        }
-        
-        .module-item {
-            background: white;
-            border-radius: 8px;
-            padding: 25px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-            transition: all 0.3s ease;
-        }
-        
-        .module-item:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-            border-left: 4px solid var(--primary);
-        }
-        
-        .module-item h3 {
-            color: var(--primary);
-            margin-top: 0;
-            display: flex;
-            align-items: center;
-            font-size: 20px;
-        }
-        
-        .module-item h3 span {
-            background: var(--primary);
-            color: white;
-            width: 28px;
-            height: 28px;
-            border-radius: 50%;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            margin-right: 12px;
-            font-size: 14px;
-        }
-        
-        .cta {
-            text-align: center;
-            background: linear-gradient(135deg, var(--secondary), var(--secondary-light));
-            color: white;
-        }
-        
-        .stats {
-            background-color: var(--primary-dark);
-            color: white;
-            text-align: center;
-            padding: 40px 0;
-        }
-        
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 30px;
-        }
-        
-        .stat-item h3 {
-            font-size: 40px;
-            margin: 0;
-            font-weight: 700;
-        }
-        
-        .stat-item p {
-            margin-top: 5px;
-            font-size: 16px;
-            opacity: 0.8;
-        }
-        
-        .testimonials {
-            text-align: center;
-        }
-        
-        footer {
-            background: var(--dark);
-            color: white;
-            padding: 50px 0;
-            text-align: center;
-        }
-        
-        .benefits {
-            background-color: #fff;
-            padding: 60px 0;
-        }
-        
-        .benefits-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 30px;
-        }
-        
-        .benefit-item {
-            text-align: center;
-            padding: 30px;
-        }
-        
-        .benefit-item i {
-            font-size: 48px;
-            color: var(--primary);
-            margin-bottom: 20px;
-        }
-        
-        .benefit-item h3 {
-            margin-top: 0;
-            font-size: 22px;
-            margin-bottom: 15px;
-        }
-        
-        @media (max-width: 992px) {
-            .feature-card {
-                flex: 0 0 calc(50% - 30px);
-            }
-            
-            .stats-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-            
-            .benefits-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-        
-        @media (max-width: 768px) {
-            header h1 {
-                font-size: 36px;
-            }
-            
-            header p {
-                font-size: 18px;
-            }
-            
-            .feature-card {
-                flex: 0 0 calc(100% - 30px);
-            }
-            
-            section h2 {
-                font-size: 30px;
-            }
-            
-            .stats-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .benefits-grid {
-                grid-template-columns: 1fr;
-            }
-        }
     </style>
-</head>
-<body>
-    <header>
-        <div class="network-bg"></div>
-        <div class="container">
-            <h1>ISP Billing and Management System</h1>
-            <p>A comprehensive solution for Internet Service Providers to streamline billing, customer management, network operations, and business growth</p>
-            <div>
-                <a href="#demo" class="btn">Request Demo</a>
-                <a href="#features" class="btn btn-outline">Explore Features</a>
-            </div>
-        </div>
-    </header>
-
-    <section id="modules" class="modules">
-        <div class="container">
-            <h2>Core Modules</h2>
-            <div class="module-grid">
-                <div class="module-item">
-                    <h3><span>1</span> Customer Management</h3>
-                    <ul>
-                        <li>Customer registration & profiling</li>
-                        <li>Service subscription management</li>
-                        <li>Customer portal with self-service</li>
-                        <li>Support ticket integration</li>
-                    </ul>
-                </div>
-                
-                <div class="module-item">
-                    <h3><span>2</span> Billing & Invoicing</h3>
-                    <ul>
-                        <li>Automated billing cycles</li>
-                        <li>Multiple pricing models</li>
-                        <li>Usage-based & flat-rate billing</li>
-                        <li>Tax calculation & compliance</li>
-                        <li>Discounts & promotional offers</li>
-                    </ul>
-                </div>
-                
-                <div class="module-item">
-                    <h3><span>3</span> Payment Processing</h3>
-                    <ul>
-                        <li>Multiple payment gateways</li>
-                        <li>Recurring payment scheduling</li>
-                        <li>Payment notifications & reminders</li>
-                        <li>Auto-payment options</li>
-                        <li>Payment dispute handling</li>
-                    </ul>
-                </div>
-                
-                <div class="module-item">
-                    <h3><span>4</span> Network Management</h3>
-                    <ul>
-                        <li>IP address & subnet management</li>
-                        <li>Bandwidth monitoring & control</li>
-                        <li>Network device integration</li>
-                        <li>Service activation/deactivation</li>
-                        <li>Network health monitoring</li>
-                    </ul>
-                </div>
-                
-                <div class="module-item">
-                    <h3><span>5</span> Service Provisioning</h3>
-                    <ul>
-                        <li>Automated service activation</li>
-                        <li>Package & plan configuration</li>
-                        <li>Service upgrades/downgrades</li>
-                        <li>Equipment management & tracking</li>
-                        <li>Installation scheduling</li>
-                    </ul>
-                </div>
-                
-                <div class="module-item">
-                    <h3><span>6</span> Support & Ticketing</h3>
-                    <ul>
-                        <li>Ticket creation & tracking</li>
-                        <li>SLA management & escalations</li>
-                        <li>Knowledge base integration</li>
-                        <li>Multi-channel support</li>
-                        <li>Customer communication history</li>
-                    </ul>
-                </div>
-                
-                <div class="module-item">
-                    <h3><span>7</span> Reporting & Analytics</h3>
-                    <ul>
-                        <li>Financial performance dashboards</li>
-                        <li>Revenue & collection analytics</li>
-                        <li>Customer acquisition & churn</li>
-                        <li>Network performance metrics</li>
-                        <li>Custom report builder</li>
-                    </ul>
-                </div>
-                
-                <div class="module-item">
-                    <h3><span>8</span> Marketing & Sales</h3>
-                    <ul>
-                        <li>Campaign management</li>
-                        <li>Lead tracking & conversion</li>
-                        <li>Referral program management</li>
-                        <li>Customer segmentation</li>
-                        <li>Cross-selling opportunities</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="features" class="features-section">
-        <div class="container">
-            <h2>Key Features</h2>
-            <div class="features">
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="#0052cc" stroke-width="2" 
-                             stroke-linecap="round" stroke-linejoin="round">
-                            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
-                            <line x1="8" y1="21" x2="16" y2="21"></line>
-                            <line x1="12" y1="17" x2="12" y2="21"></line>
-                        </svg>
-                    </div>
-                    <div class="feature-content">
-                        <h3>Automated Billing</h3>
-                        <ul>
-                            <li>Recurring billing automation</li>
-                            <li>Prorated billing for mid-cycle changes</li>
-                            <li>Usage-based billing with thresholds</li>
-                            <li>Multi-currency support</li>
-                            <li>Flexible billing cycles</li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="#0052cc" stroke-width="2" 
-                             stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
-                        </svg>
-                    </div>
-                    <div class="feature-content">
-                        <h3>Network Monitoring</h3>
-                        <ul>
-                            <li>Real-time bandwidth monitoring</li>
-                            <li>Traffic analysis & shaping</li>
-                            <li>QoS management</li>
-                            <li>Automated alerts & notifications</li>
-                            <li>Network topology mapping</li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="#0052cc" stroke-width="2" 
-                             stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-                            <circle cx="9" cy="7" r="4"></circle>
-                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
-                            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-                        </svg>
-                    </div>
-                    <div class="feature-content">
-                        <h3>Customer Self-Service</h3>
-                        <ul>
-                            <li>Client portal with dashboard</li>
-                            <li>Online bill payment</li>
-                            <li>Service upgrade/downgrade options</li>
-                            <li>Usage statistics & history</li>
-                            <li>Support ticket submission & tracking</li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="#0052cc" stroke-width="2" 
-                             stroke-linecap="round" stroke-linejoin="round">
-                            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
-                            <path d="M7 11V7a5 5 0 0110 0v4"></path>
-                        </svg>
-                    </div>
-                    <div class="feature-content">
-                        <h3>Security & Compliance</h3>
-                        <ul>
-                            <li>End-to-end encryption</li>
-                            <li>Multi-factor authentication</li>
-                            <li>Role-based access control</li>
-                            <li>Data retention policies</li>
-                            <li>Regulatory compliance tools</li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="#0052cc" stroke-width="2" 
-                             stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"></path>
-                            <path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"></path>
-                        </svg>
-                    </div>
-                    <div class="feature-content">
-                        <h3>Integration Ecosystem</h3>
-                        <ul>
-                            <li>Accounting software integration</li>
-                            <li>CRM & marketing automation</li>
-                            <li>Network equipment APIs</li>
-                            <li>Payment gateway connectors</li>
-                            <li>Third-party service provisioning</li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="#0052cc" stroke-width="2" 
-                             stroke-linecap="round" stroke-linejoin="round">
-                            <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
-                            <line x1="12" y1="18" x2="12" y2="18"></line>
-                        </svg>
-                    </div>
-                    <div class="feature-content">
-                        <h3>Mobile Access</h3>
-                        <ul>
-                            <li>Responsive admin dashboard</li>
-                            <li>Native mobile applications</li>
-                            <li>Field technician mobile tools</li>
-                            <li>Offline capabilities with sync</li>
-                            <li>Push notifications</li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="#0052cc" stroke-width="2" 
-                             stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M12 20h9"></path>
-                            <path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"></path>
-                        </svg>
-                    </div>
-                    <div class="feature-content">
-                        <h3>Customization Options</h3>
-                        <ul>
-                            <li>Configurable billing workflows</li>
-                            <li>Custom service packages</li>
-                            <li>Branding & white-labeling</li>
-                            <li>Custom fields & forms</li>
-                            <li>API-driven extensibility</li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="#0052cc" stroke-width="2" 
-                             stroke-linecap="round" stroke-linejoin="round">
-                            <circle cx="12" cy="12" r="10"></circle>
-                            <line x1="12" y1="8" x2="12" y2="12"></line>
-                            <line x1="12" y1="16" x2="12.01" y2="16"></line>
-                        </svg>
-                    </div>
-                    <div class="feature-content">
-                        <h3>Automated Notifications</h3>
-                        <ul>
-                            <li>Payment reminders & confirmations</li>
-                            <li>Service outage alerts</li>
-                            <li>Usage threshold notifications</li>
-                            <li>Scheduled maintenance notices</li>
-                            <li>Multi-channel delivery (SMS, email)</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="stats">
-        <div class="container">
-            <div class="stats-grid">
-                <div class="stat-item">
-                    <h3>99.9%</h3>
-                    <p>System Uptime</p>
-                </div>
-                <div class="stat-item">
-                    <h3>30%</h3>
-                    <p>Reduction in Billing Errors</p>
-                </div>
-                <div class="stat-item">
-                    <h3>25%</h3>
-                    <p>Increase in Collection Rate</p>
-                </div>
-                <div class="stat-item">
-                    <h3>40%</h3>
-                    <p>Time Saved on Operations</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="benefits">
-        <div class="container">
-            <h2>Why Choose Our ISP Billing System</h2>
-            <div class="benefits-grid">
-                <div class="benefit-item">
-                    <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="#0052cc" stroke-width="2" 
-                         stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                        <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                    </svg>
-                    <h3>Reduce Revenue Leakage</h3>
-                    <p>Eliminate billing errors and ensure all services are properly billed with automated processes and validation checks.</p>
-                </div>
-                <div class="benefit-item">
-                    <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="#0052cc" stroke-width="2" 
-                         stroke-linecap="round" stroke-linejoin="round">
-                        <circle cx="12" cy="12" r="10"></circle>
-                        <polyline points="16 12 12 8 8 12"></polyline>
-                        <line x1="12" y1="16" x2="12" y2="8"></line>
-                    </svg>
-                    <h3>Scale Your Business</h3>
-                    <p>Support growth from hundreds to millions of subscribers with our cloud-based architecture and flexible deployment options.</p>
-                </div>
-                <div class="benefit-item">
-                    <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="#0052cc" stroke-width="2" 
-                         stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-                        <circle cx="8.5" cy="7" r="4"></circle>
-                        <polyline points="17 11 19 13 23 9"></polyline>
-                    </svg>
-                    <h3>Improve Customer Experience</h3>
-                    <p>Enhance satisfaction with self-service options, transparent billing, and faster issue resolution.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="cta" id="demo">
-        <div class="container">
-            <h2>Ready to Transform Your ISP Business?</h2>
-            <p>Get started today with our comprehensive ISP Billing and Management System</p>
-            <a href="#contact" class="btn">Request Demo</a>
-            <a href="#pricing" class="btn btn-outline">View Pricing</a>
-        </div>
-    </section>
-
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 ISP Billing and Management System. All rights reserved.</p>
-        </div>
-    </footer>
 </body>
+
 </html>
